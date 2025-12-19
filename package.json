@@ -1,6 +1,6 @@
 {
   "name": "griffin.grislyeye.com",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "skeleton-css": "^2.0.4",
     "vellum-doc": "^0.10.1"
@@ -15,7 +15,7 @@
     "stylelint-config-standard": "^39.0.1"
   },
   "scripts": {
-    "build": "mkdir -p dist && cp -r CNAME main.css assets dist/ && mkdir -p dist/vendor && cp -r node_modules/skeleton-css dist/vendor && cp -r node_modules/vellum-doc dist/vendor",
+    "build": "mkdir -p dist && cp -r index.html CNAME main.css assets dist/ && mkdir -p dist/vendor && cp -r node_modules/skeleton-css dist/vendor && cp -r node_modules/vellum-doc dist/vendor",
     "clean": "rm -r dist",
     "test": "npm run lint && npx linkinator index.html -ro --recurse --skip '(.*\\.grislyeye\\.com)|(.*\\.reddit\\.com)|(.*\\.twitter\\.com)|(.*\\.drivethrurpg\\.com)' --verbosity debug",
     "lint": "npx prettier . --check && htmlhint 'index.html' && stylelint main.css assets/styles/**/*.css",
