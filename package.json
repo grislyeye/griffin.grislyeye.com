@@ -17,7 +17,7 @@
   "scripts": {
     "build": "mkdir -p dist && cp -r index.html CNAME main.css assets dist/ && mkdir -p dist/vendor && cp -r node_modules/skeleton-css dist/vendor && cp -r node_modules/vellum-doc dist/vendor",
     "clean": "rm -r dist",
-    "test": "npm run lint && npx linkinator index.html -ro --recurse --skip '(.*\\.reddit\\.com)|(.*\\.twitter\\.com)|(.*\\.drivethrurpg\\.com)' --verbosity debug",
+    "test": "npm run lint && npx linkinator index.html -ro --recurse",
     "lint": "npx prettier . --check && htmlhint 'index.html' && stylelint main.css assets/styles/**/*.css",
     "lint:fix": "npx prettier . --write",
     "start": "npm run build && npm run start:server",
